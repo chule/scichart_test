@@ -11,15 +11,17 @@
   },
   "dependencies": {
     "copy-files-from-to": "^3.12.1",
+    "d3-hierarchy": "^3.1.2",
     "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "scichart": "^3.5.744",
+    "scichart": "^4.0.0-beta.689",
     "scichart-react": "^0.1.9"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/d3-hierarchy": "^3.1.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

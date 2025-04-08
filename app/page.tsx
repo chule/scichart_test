@@ -1,13 +1,16 @@
 import ChartExample from "./ChartExample";
-
 export default function Home() {
 
-  const data = {
-    xValues: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-    yValues: [
-      0, 0.0998, 0.1986, 0.2955, 0.3894, 0.4794, 0.5646, 0.6442, 0.7173, 0.7833,
-    ],
-  };
+  const data = [
+    { name: "Orgin", parent: "", value: "" },
+    { name: "grp1", parent: "Orgin", value: "6", color: "green" },
+    { name: "grp2", parent: "Orgin", value: "6", color: "red" },
+    { name: "grp3", parent: "Orgin", value: "4", color: "green" },
+    { name: "grp4", parent: "Orgin", value: "3", color: "red" },
+    { name: "grp5", parent: "Orgin", value: "2", color: "green" },
+    { name: "grp6", parent: "Orgin", value: "2", color: "red" },
+    { name: "grp7", parent: "Orgin", value: "1", color: "green" },
+  ];
 
   return (
     <main>
