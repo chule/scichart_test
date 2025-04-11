@@ -11,13 +11,14 @@ import {
   EDataPointWidthMode,
   EResamplingMode,
   XyxyDataSeries,
-  EColumnDataLabelPosition,
   IFillPaletteProvider,
   EFillPaletteMode,
   EStrokePaletteMode,
   IPointMetadata,
   parseColorToUIntArgb,
   IStrokePaletteProvider,
+  EVerticalTextPosition,
+  EHorizontalTextPosition,
 } from "scichart";
 
 import { HierarchyRectangularNode, stratify, treemap } from "d3-hierarchy";
@@ -48,12 +49,20 @@ async function initSciChart(
   );
 
   // Create an XAxis and YAxis with growBy padding
-  const growBy = new NumberRange(0.1, 0.1);
+  const growBy = new NumberRange(0.01, 0.01);
   sciChartSurface.xAxes.add(
-    new NumericAxis(wasmContext, { axisTitle: "X Axis", growBy })
+    new NumericAxis(wasmContext, {
+      axisTitle: "X Axis",
+      growBy,
+      isVisible: false,
+    })
   );
   sciChartSurface.yAxes.add(
-    new NumericAxis(wasmContext, { axisTitle: "Y Axis", growBy })
+    new NumericAxis(wasmContext, {
+      axisTitle: "Y Axis",
+      growBy,
+      isVisible: false,
+    })
   );
 
   const yAxis = sciChartSurface.yAxes.get(0);
@@ -74,7 +83,7 @@ async function initSciChart(
   const width = 15;
   const height = 10;
 
-  treemap().size([width, height]).padding(0.05)(root);
+  treemap().size([width, height]).padding(0.1)(root);
 
   const treemapData = root.leaves();
 
@@ -125,9 +134,9 @@ async function initSciChart(
     topCornerRadius: 5,
     bottomCornerRadius: 5,
     dataLabels: {
-      // horizontalTextPosition: EHorizontalTextPosition.Center,
-      // verticalTextPosition: EVerticalTextPosition.Center,
-      positionMode: EColumnDataLabelPosition.Inside,
+      horizontalTextPosition: EHorizontalTextPosition.Center,
+      verticalTextPosition: EVerticalTextPosition.Center,
+      // positionMode: EColumnDataLabelPosition.Inside,
       style: {
         fontSize: 16,
       },

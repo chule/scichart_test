@@ -3,13 +3,13 @@ export default function Home() {
 
   const data = [
     { name: "Orgin", parent: "", value: "" },
-    { name: "grp1", parent: "Orgin", value: "6", color: "green" },
-    { name: "grp2", parent: "Orgin", value: "6", color: "red" },
-    { name: "grp3", parent: "Orgin", value: "4", color: "green" },
-    { name: "grp4", parent: "Orgin", value: "3", color: "red" },
-    { name: "grp5", parent: "Orgin", value: "2", color: "green" },
-    { name: "grp6", parent: "Orgin", value: "2", color: "red" },
-    { name: "grp7", parent: "Orgin", value: "1", color: "green" },
+    { name: "Electronics", parent: "Orgin", value: "6", color: "darkgreen" },
+    { name: "Home Appliances", parent: "Orgin", value: "6", color: "darkred" },
+    { name: "Clothing", parent: "Orgin", value: "4", color: "darkgreen" },
+    { name: "Books", parent: "Orgin", value: "3", color: "darkred" },
+    { name: "Health & Beauty", parent: "Orgin", value: "2", color: "darkgreen" },
+    { name: "Sports & Outdoors", parent: "Orgin", value: "2", color: "darkred" },
+    { name: "Toys", parent: "Orgin", value: "1", color: "darkgreen" },
   ];
 
   return (
